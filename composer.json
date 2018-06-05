@@ -1,0 +1,7 @@
+{
+    "require": {
+        "paquettg/php-html-parser": "^1.7",
+        "php-curl-class/php-curl-class": "^8.0",
+        "katzgrau/klogger": "dev-master"
+    }
+}
