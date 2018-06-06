@@ -19,6 +19,21 @@ class NTFDFire extends BaseSpider
 
         $tds = $dom->find("table tr[style=\"height: 25px\"]");
 
-        echo count($tds).PHP_EOL;
+        $result = [];
+
+        foreach($table as $key => $one){
+            $two = $one->find("td");
+
+            $result[] = [
+                'time' => str_replace ("&nbsp;&nbsp;&nbsp;&nbsp;"," ",$two[0]->plaintext),
+                'type' => $two[1]->plaintext,
+                'team' => $two[2]->plaintext,
+                'status' => $two[3]->plaintext,
+                'location' => $two[4]->plaintext,
+                'created_at' => date('Y-m-d H:i:s'),
+                'updated_at' => date('Y-m-d H:i:s'),
+            ];
+        }
+        return $result;
     }
 }
