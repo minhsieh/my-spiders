@@ -21,15 +21,15 @@ class NTFDFire extends BaseSpider
 
         $result = [];
 
-        foreach($table as $key => $one){
+        foreach($tds as $key => $one){
             $two = $one->find("td");
 
             $result[] = [
-                'time' => str_replace ("&nbsp;&nbsp;&nbsp;&nbsp;"," ",$two[0]->plaintext),
-                'type' => $two[1]->plaintext,
-                'team' => $two[2]->plaintext,
-                'status' => $two[3]->plaintext,
-                'location' => $two[4]->plaintext,
+                'time' => str_replace ("&nbsp;&nbsp;&nbsp;&nbsp;"," ",$two[0]->text(true)),
+                'type' => $two[1]->text(true),
+                'team' => $two[2]->text(true),
+                'status' => $two[3]->text(true),
+                'location' => $two[4]->text(true),
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),
             ];
