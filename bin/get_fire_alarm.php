@@ -1,9 +1,9 @@
 <?php
 require dirname(__DIR__)."/vendor/autoload.php";
 
-use Spiders\NTFDFire;
+use Spiders\NTFDFireSpider;
 
-$spider = new NTFDFire;
+$spider = new NTFDFireSpider;
 
 $alarms = $spider->getFireAlarms();
 

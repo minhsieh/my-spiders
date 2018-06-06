@@ -1,7 +1,7 @@
 <?php
 namespace Spiders;
 
-class NTFDFire extends BaseSpider
+class NTFDFireSpider extends BaseSpider
 {
     protected $ntfd_url = "http://minhsieh.info/api/firealarm/";
     protected $base_path;
@@ -10,7 +10,6 @@ class NTFDFire extends BaseSpider
     {
         if(!empty($ntfd_url)) $this->ntfd_url = $ntfd_url;
         if(!empty($base_path)) $this->base_path = $base_path;
-        echo "test";
     }
 
     public function getFireAlarms()
