@@ -1,5 +1,5 @@
 <?php
-require dirname(__DIR__)."/vendor/autoload";
+require dirname(__DIR__)."/vendor/autoload.php";
 
 use Spiders\NTFDFire;
 
