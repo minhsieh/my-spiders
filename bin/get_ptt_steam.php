@@ -4,7 +4,7 @@ use Spiders\PttSpider;
 
 $spider = new PttSpider;
 
-$alarms = $spider->getPosts("NBA",3);
+$alarms = $spider->getPosts("Gossiping",3);
 
 print_r($alarms);
 

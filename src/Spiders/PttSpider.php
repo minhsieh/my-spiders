@@ -12,7 +12,7 @@ class PttSpider extends BaseSpider
         $result = [];
 
         for($i = 0 ; $i < $pages ; $i++){
-            $html = $this->getHtml($url);
+            $html = $this->getHtml($url,['cookies' => ['over18' => 1]]);
             $dom = $this->getDom($html);
             $posts = $dom->find('.r-ent');
             $result_tmp = [];
@@ -54,10 +54,5 @@ class PttSpider extends BaseSpider
             $url = $ptt_url.$btn->getAttribute('href');
         }
         return $result;
-    }
-
-    public function test()
-    {
-
     }
 }
