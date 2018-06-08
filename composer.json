@@ -14,7 +14,7 @@
     ],
     "autoload":{
         "psr-4": {
-            "Spiders\\": "src/"
+            "Spiders\\": "src/Spiders/"
         }
     }
 }
