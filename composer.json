@@ -11,5 +11,10 @@
             "name": "minhsieh",
             "email": "side112358@gmail.com"
         }
-    ]
+    ],
+    "autoload":{
+        "psr-4": {
+            "Spiders": "src/"
+        }
+    }
 }
