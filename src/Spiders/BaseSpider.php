@@ -26,6 +26,10 @@ class BaseSpider
     {
         $dom = new Dom;
         $dom->load($html);
+        $dom->setOptions([
+            'strict' => true, // Set a global option to enable strict html parsing.
+            'cleanupInput' => true,
+        ]);
         return $dom;
     }
 }
