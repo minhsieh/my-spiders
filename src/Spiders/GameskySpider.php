@@ -10,13 +10,13 @@ class GameskySpider extends BaseSpider
 
     public function getNews()
     {
-        $url = "http://www.gamersky.com/steam/news/";
+        $url = "https://www.gamersky.com/steam/news/";
         return $this->getPostList($url);
     }
 
     public function getSales()
     {
-        $url = "http://www.gamersky.com/steam/sales/";
+        $url = "https://www.gamersky.com/steam/sales/";
         return $this->getPostList($url);
     }
 
